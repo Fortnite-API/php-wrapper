@@ -2,7 +2,7 @@
 
 # PHP wrapper for [Fortnite-API.com](https://fortnite-api.com)
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/michel-pi/fortnite-api-php-wrapper)](https://github.com/michel-pi/fortnite-api-php-wrapper/releases) [![Packagist](https://img.shields.io/packagist/dt/michel-pi/fortnite-api)](https://packagist.org/packages/michel-pi/fortnite-api) [![GitHub issues](https://img.shields.io/github/issues/michel-pi/fortnite-api-php-wrapper)](https://github.com/michel-pi/fortnite-api-php-wrapper/issues) [![MIT License](https://img.shields.io/github/license/michel-pi/fortnite-api-php-wrapper)](https://github.com/michel-pi/fortnite-api-php-wrapper/blob/master/LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/releases) [![Packagist](https://img.shields.io/packagist/dt/michel-pi/fortnite-api)](https://packagist.org/packages/michel-pi/fortnite-api) [![GitHub issues](https://img.shields.io/github/issues/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/issues) [![MIT License](https://img.shields.io/github/license/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/blob/master/LICENSE)
 
 [![Guzzle HTTP](https://img.shields.io/badge/requires-guzzlehttp%2Fguzzle-blue)](https://github.com/guzzle/guzzle) [![PHP version](https://img.shields.io/packagist/php-v/michel-pi/fortnite-api)](https://www.php.net/)
 
@@ -16,18 +16,18 @@ We also have async requests for each endpoint!
 
 ## Composer
 
-    composer require michel-pi/fortnite-api
+    composer require fortnite-api/php-wrapper
 
 ## Documentation
 
 Here is a quick overview of the API so you can get started very quickly.
 
-If you need an in-use example then please take a look at the [index.php](https://github.com/michel-pi/fortnite-api-php-wrapper/blob/master/test/index.php) in my test folder where i use some of the endpoints.
+If you need an in-use example then please take a look at the [index.php](https://github.com/Fortnite-API/php-wrapper/blob/master/test/index.php) in my test folder where i use some of the endpoints.
 
 - General usage
 
 ```php
-use MichelPi\FortniteApi\FortniteApi;
+use FortniteApi\FortniteApi;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -104,9 +104,9 @@ Objects are mapped with the exact same layout as on [fortnite-api.com/documentat
 
 If you need more information about properties and methods then please take a look at the actual implementation.
 
-[Endpoints](https://github.com/michel-pi/fortnite-api-php-wrapper/tree/master/src/Components/Endpoints)
+[Endpoints](https://github.com/Fortnite-API/php-wrapper/tree/master/src/Components/Endpoints)
 
-[JSON Objects](https://github.com/michel-pi/fortnite-api-php-wrapper/tree/master/src/Components/Objects)
+[JSON Objects](https://github.com/Fortnite-API/php-wrapper/tree/master/src/Components/Objects)
 
 - The `query` parameter
 
@@ -128,22 +128,9 @@ if you can provide any help, may it only be spell checking please contribute!
 
 I am open for any contribution.
 
-### Donate
-
-Do you like this project or use it commercially?
-You can help me continuing my open source projects by using one of the methods to donate (even a single dollar helps and shows that you like my project).
-
-[![Donate via PayPal](https://media.wtf/assets/img/pp.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YJDWMDUSM8KKQ "Donate via PayPal")
-
-```
-BTC     14ES7f4GB3vD1C8Faz6ywqTcdDevxZoMyY
-
-ETH     0xd9E2CB12d310E7BF5E72F591D7A2b8820adced04
-```
-
 ## License
 
-- michel-pi/fortnite-api (MIT) [License](https://github.com/michel-pi/fortnite-api-php-wrapper/blob/master/LICENSE "MIT License")
+- Fortnite-API (MIT) [License](https://github.com/Fortnite-API/php-wrapper/blob/master/LICENSE "MIT License")
 - guzzlehttp/guzzle (MIT) [License](https://github.com/guzzle/guzzle/blob/master/LICENSE "MIT License")
 
 API developed by [Fortnite-API.com](https://fortnite-api.com/about)
