@@ -1,0 +1,39 @@
+{
+  "name": "michel-pi/fortnite-api",
+  "description": "PHP wrapper for https://fortnite-api.com",
+  "keywords": [
+    "framework",
+    "wrapper",
+    "api",
+    "fortnite",
+    "fortnite-api",
+    "client",
+    "fortnite-api.com",
+    "michel-pi"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "michel-pi",
+      "email": "github@michel-pi.de",
+      "homepage": "https://github.com/michel-pi/fortnite-api-php-wrapper",
+      "role": "developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.0",
+    "guzzlehttp/guzzle": "^6.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "MichelPi\\FortniteApi\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MichelPi\\FortniteApi\\": "src/"
+    }
+  }
+}
