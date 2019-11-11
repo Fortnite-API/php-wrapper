@@ -4,6 +4,7 @@ namespace FortniteApi\Components\Objects;
 
 use Exception;
 use FortniteApi\Components\Objects\Reflection\Activator;
+use FortniteApi\Components\Objects\Variant;
 
 class Cosmetic
 {
