@@ -1,11 +1,11 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components\Endpoints;
+namespace FortniteApi\Components\Endpoints;
 
-use MichelPi\FortniteApi\Components\HttpClient;
-use MichelPi\FortniteApi\Components\Tasks\ShopTask;
-use MichelPi\FortniteApi\FortniteApi;
-use MichelPi\FortniteApi\FortniteApiError;
+use FortniteApi\Components\HttpClient;
+use FortniteApi\Components\Tasks\ShopTask;
+use FortniteApi\FortniteApi;
+use FortniteApi\FortniteApiError;
 
 /**
  * Provides access to the /shop/ endpoint.

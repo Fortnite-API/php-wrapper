@@ -1,9 +1,9 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components\Objects;
+namespace FortniteApi\Components\Objects;
 
 use Exception;
-use MichelPi\FortniteApi\Components\Objects\Reflection\Activator;
+use FortniteApi\Components\Objects\Reflection\Activator;
 
 class Image
 {

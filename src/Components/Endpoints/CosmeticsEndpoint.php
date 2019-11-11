@@ -1,13 +1,13 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components\Endpoints;
+namespace FortniteApi\Components\Endpoints;
 
-use MichelPi\FortniteApi\Components\HttpClient;
-use MichelPi\FortniteApi\Components\Objects\Cosmetic;
-use MichelPi\FortniteApi\Components\Tasks\CosmeticArrayTask;
-use MichelPi\FortniteApi\Components\Tasks\CosmeticTask;
-use MichelPi\FortniteApi\FortniteApi;
-use MichelPi\FortniteApi\FortniteApiError;
+use FortniteApi\Components\HttpClient;
+use FortniteApi\Components\Objects\Cosmetic;
+use FortniteApi\Components\Tasks\CosmeticArrayTask;
+use FortniteApi\Components\Tasks\CosmeticTask;
+use FortniteApi\FortniteApi;
+use FortniteApi\FortniteApiError;
 
 /**
  * Provides access to the /cosmetics/ endpoint

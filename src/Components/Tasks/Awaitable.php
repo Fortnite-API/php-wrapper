@@ -1,6 +1,6 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components\Tasks;
+namespace FortniteApi\Components\Tasks;
 
 use GuzzleHttp\Promise\Promise;
 

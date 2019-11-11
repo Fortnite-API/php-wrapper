@@ -1,11 +1,11 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components\Tasks;
+namespace FortniteApi\Components\Tasks;
 
 use Exception;
-use MichelPi\FortniteApi\Components\HttpClient;
-use MichelPi\FortniteApi\Components\Objects\NewsEntry;
-use MichelPi\FortniteApi\FortniteApiError;
+use FortniteApi\Components\HttpClient;
+use FortniteApi\Components\Objects\NewsEntry;
+use FortniteApi\FortniteApiError;
 use Psr\Http\Message\ResponseInterface as Response;
 
 class NewsEntryTask extends Awaitable

@@ -1,6 +1,6 @@
 <?php
 
-namespace MichelPi\FortniteApi\Config;
+namespace FortniteApi\Config;
 
 class Config
 {

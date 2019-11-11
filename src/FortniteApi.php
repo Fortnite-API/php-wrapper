@@ -1,11 +1,11 @@
 <?php
 
-namespace MichelPi\FortniteApi;
+namespace FortniteApi;
 
-use MichelPi\FortniteApi\Components\Endpoints\CosmeticsEndpoint;
-use MichelPi\FortniteApi\Components\Endpoints\NewsEndpoint;
-use MichelPi\FortniteApi\Components\Endpoints\ShopEndpoint;
-use MichelPi\FortniteApi\Config\Config;
+use FortniteApi\Components\Endpoints\CosmeticsEndpoint;
+use FortniteApi\Components\Endpoints\NewsEndpoint;
+use FortniteApi\Components\Endpoints\ShopEndpoint;
+use FortniteApi\Config\Config;
 
 /**
  * Provides access to https://fortnite-api.com

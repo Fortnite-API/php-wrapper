@@ -1,12 +1,12 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components\Endpoints;
+namespace FortniteApi\Components\Endpoints;
 
-use MichelPi\FortniteApi\Components\HttpClient;
-use MichelPi\FortniteApi\Components\Tasks\NewsEntryTask;
-use MichelPi\FortniteApi\Components\Tasks\NewsTask;
-use MichelPi\FortniteApi\FortniteApi;
-use MichelPi\FortniteApi\FortniteApiError;
+use FortniteApi\Components\HttpClient;
+use FortniteApi\Components\Tasks\NewsEntryTask;
+use FortniteApi\Components\Tasks\NewsTask;
+use FortniteApi\FortniteApi;
+use FortniteApi\FortniteApiError;
 
 /**
  * Provides access to the /news/ endpoint.

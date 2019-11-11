@@ -1,6 +1,6 @@
 <?php
 
-namespace MichelPi\FortniteApi;
+namespace FortniteApi;
 
 use Exception;
 use \Psr\Http\Message\ResponseInterface as Response;

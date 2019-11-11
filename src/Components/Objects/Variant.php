@@ -1,76 +1,79 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components\Objects;
+namespace FortniteApi\Components\Objects\Reflection;
 
-use Exception;
-use MichelPi\FortniteApi\Components\Objects\Reflection\Activator;
+use FortniteApi\Components\JsonSerializer;
 
-class Variant
+class Activator
 {
-    /**
-     * Undocumented variable
-     *
-     * @var Activator
-     */
-    private static $_activator;
+    private $activator;
+    private $initializer;
 
-    /**
-     * Undocumented variable
-     *
-     * @var null|string
-     */
-    public $type;
-    /**
-     * Undocumented variable
-     *
-     * @var null|Option[]|array
-     */
-    public $options;
-
-    public static function createObject($body)
+    public function __construct($activator, $initializer)
     {
-        return self::getActivator()->createObjectFromBody($body);
+        $this->activator = $activator;
+        $this->initializer = $initializer;
     }
 
-    public static function createObjectArray($body)
+    public function createObjectFromBody($body)
     {
-        return self::getActivator()->createArrayFromBody($body);
-    }
+        if (empty($body)) {
+            return null;
+        }
 
-    /**
-     * Undocumented function
-     *
-     * @param Variant $obj
-     * @param array|mixed $body
-     * @return bool
-     */
-    private static function initializeObject(&$obj, &$body)
-    {
-        try {
-            $obj->type = $body["type"];
-            $obj->options = Option::createObjectArray($body["options"]);
-            
-            return true;
-        } catch (Exception $ex) {
-            return false;
+        if (is_string($body)) {
+            $body = JsonSerializer::deserialize($body);
+
+            if ($body === false) {
+                return null;
+            }
+        }
+
+        if (array_key_exists("status", $body) && array_key_exists("data", $body)) {
+            $body = $body["data"];
+        }
+
+        $obj = call_user_func($this->activator);
+
+        if (call_user_func_array($this->initializer, array(&$obj, &$body))) {
+            return $obj;
+        } else {
+            return null;
         }
     }
 
-    /**
-     * Undocumented function
-     *
-     * @return Activator
-     */
-    private static function getActivator()
+    public function createArrayFromBody($body)
     {
-        if (empty(self::$_activator)) {
-            self::$_activator = new Activator(function () {
-                return new Variant();
-            }, function (&$obj, &$body) {
-                return self::initializeObject($obj, $body);
-            });
+        if (empty($body)) {
+            return null;
         }
 
-        return self::$_activator;
+        if (is_string($body)) {
+            $body = JsonSerializer::deserialize($body);
+
+            if ($body === false) {
+                return null;
+            }
+        }
+
+        if (array_key_exists("status", $body) && array_key_exists("data", $body)) {
+            $body = $body["data"];
+        }
+
+        $result = [];
+
+        foreach ($body as $item) {
+            $obj = call_user_func($this->activator);
+
+            if (call_user_func_array($this->initializer, array(&$obj, &$item))) {
+                $result[] = $obj;
+            }
+        }
+
+        if (count($result) == 0) {
+            return null;
+        } else {
+            return $result;
+        }
     }
 }

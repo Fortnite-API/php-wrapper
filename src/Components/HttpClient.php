@@ -1,9 +1,9 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components;
+namespace FortniteApi\Components;
 
 use GuzzleHttp\Client;
-use MichelPi\FortniteApi\Config\Config;
+use FortniteApi\Config\Config;
 
 class HttpClient
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components;
+namespace FortniteApi\Components;
 
 class JsonSerializer
 {

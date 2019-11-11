@@ -1,8 +1,8 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components\Objects\Reflection;
+namespace FortniteApi\Components\Objects\Reflection;
 
-use MichelPi\FortniteApi\Components\JsonSerializer;
+use FortniteApi\Components\JsonSerializer;
 
 class Activator
 {

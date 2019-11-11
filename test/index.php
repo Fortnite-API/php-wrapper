@@ -1,8 +1,8 @@
 <?php
 
-use MichelPi\FortniteApi\Components\JsonSerializer;
-use MichelPi\FortniteApi\FortniteApi;
-use MichelPi\FortniteApi\FortniteApiError;
+use FortniteApi\Components\JsonSerializer;
+use FortniteApi\FortniteApi;
+use FortniteApi\FortniteApiError;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

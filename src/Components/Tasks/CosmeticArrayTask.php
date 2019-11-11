@@ -1,11 +1,11 @@
 <?php
 
-namespace MichelPi\FortniteApi\Components\Tasks;
+namespace FortniteApi\Components\Tasks;
 
 use Exception;
-use MichelPi\FortniteApi\Components\HttpClient;
-use MichelPi\FortniteApi\Components\Objects\Cosmetic;
-use MichelPi\FortniteApi\FortniteApiError;
+use FortniteApi\Components\HttpClient;
+use FortniteApi\Components\Objects\Cosmetic;
+use FortniteApi\FortniteApiError;
 use Psr\Http\Message\ResponseInterface as Response;
 
 class CosmeticArrayTask extends Awaitable
