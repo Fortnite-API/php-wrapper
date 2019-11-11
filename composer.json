@@ -1,5 +1,5 @@
 {
-  "name": "michel-pi/fortnite-api",
+  "name": "fortnite-api/php-wrapper",
   "description": "PHP wrapper for https://fortnite-api.com",
   "keywords": [
     "framework",
@@ -16,9 +16,15 @@
   "authors": [
     {
       "name": "michel-pi",
-      "email": "github@michel-pi.de",
-      "homepage": "https://github.com/michel-pi/fortnite-api-php-wrapper",
-      "role": "developer"
+      "email": "mail@michel-pi.de",
+      "homepage": "https://github.com/Fortnite-API/php-wrapper",
+      "role": "maintainer"
+    },
+    {
+      "name": "NotOfficer",
+      "email": "contact@fortnite-api.com",
+      "homepage": "https://github.com/Fortnite-API/php-wrapper",
+      "role": "owner"
     }
   ],
   "minimum-stability": "stable",
@@ -28,12 +34,12 @@
   },
   "autoload": {
     "psr-4": {
-      "MichelPi\\FortniteApi\\": "src/"
+      "FortniteApi\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "MichelPi\\FortniteApi\\": "src/"
+      "FortniteApi\\": "src/"
     }
   }
 }
