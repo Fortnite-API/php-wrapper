@@ -2,9 +2,9 @@
 
 # PHP wrapper for [Fortnite-API.com](https://fortnite-api.com)
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/releases) [![Packagist](https://img.shields.io/packagist/dt/michel-pi/fortnite-api)](https://packagist.org/packages/michel-pi/fortnite-api) [![GitHub issues](https://img.shields.io/github/issues/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/issues) [![MIT License](https://img.shields.io/github/license/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/blob/master/LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/releases) [![Packagist](https://img.shields.io/packagist/dt/fortnite-api/php-wrapper)](https://packagist.org/packages/fortnite-api/php-wrapper) [![GitHub issues](https://img.shields.io/github/issues/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/issues) [![MIT License](https://img.shields.io/github/license/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/blob/master/LICENSE)
 
-[![Guzzle HTTP](https://img.shields.io/badge/requires-guzzlehttp%2Fguzzle-blue)](https://github.com/guzzle/guzzle) [![PHP version](https://img.shields.io/packagist/php-v/michel-pi/fortnite-api)](https://www.php.net/)
+[![Guzzle HTTP](https://img.shields.io/badge/requires-guzzlehttp%2Fguzzle-blue)](https://github.com/guzzle/guzzle) [![PHP version](https://img.shields.io/packagist/php-v/fortnite-api/php-wrapper)](https://www.php.net/)
 
 </div>
 
@@ -126,7 +126,7 @@ $query = [
 
 if you can provide any help, may it only be spell checking please contribute!
 
-I am open for any contribution.
+We are open for any contribution.
 
 ## License
 
