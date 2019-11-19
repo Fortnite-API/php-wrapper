@@ -49,6 +49,31 @@ class ShopEntry
      */
     public $items;
 
+    /**
+     * Undocumented variable
+     *
+     * @var int
+     */
+    public $sortPriority;
+    /**
+     * Undocumented variable
+     *
+     * @var bool
+     */
+    public $isBundle;
+    /**
+     * Undocumented variable
+     *
+     * @var bool
+     */
+    public $refundable;
+    /**
+     * Undocumented variable
+     *
+     * @var bool
+     */
+    public $giftable;
+
     public static function createObject($body)
     {
         return self::getActivator()->createObjectFromBody($body);
@@ -74,6 +99,10 @@ class ShopEntry
             $obj->panel = $body["panel"];
             $obj->banner = $body["banner"];
             $obj->items = Cosmetic::createObjectArray($body["items"]);
+            $obj->sortPriority = $body["sortPriority"];
+            $obj->isBundle = $body["isBundle"];
+            $obj->refundable = $body["refundable"];
+            $obj->giftable = $body["giftable"];
 
             return true;
         } catch (Exception $ex) {

@@ -142,6 +142,20 @@ class Cosmetic
      */
     public $added;
 
+    /**
+     * Undocumented variable
+     *
+     * @var null|string
+     */
+    public $displayRarity;
+
+    /**
+     * Undocumented variable
+     *
+     * @var null|string
+     */
+    public $setText;
+
     public static function createObject($body)
     {
         return self::getActivator()->createObjectFromBody($body);
@@ -182,6 +196,8 @@ class Cosmetic
             $obj->path = $body["path"];
             $obj->lastUpdate = $body["lastUpdate"];
             $obj->added = $body["added"];
+            $obj->displayRarity = $body["displayRarity"];
+            $obj->setText = $body["setText"];
 
             $obj->images = [];
             foreach ($body["images"] as $key => $value) {
