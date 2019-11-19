@@ -2,9 +2,9 @@
 
 # PHP wrapper for [Fortnite-API.com](https://fortnite-api.com)
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/releases) [![Packagist](https://img.shields.io/packagist/dt/fortnite-api/php-wrapper)](https://packagist.org/packages/fortnite-api/php-wrapper) [![GitHub issues](https://img.shields.io/github/issues/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/issues) [![MIT License](https://img.shields.io/github/license/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/blob/master/LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Fortnite-API/php-wrapper?logo=github)](https://github.com/Fortnite-API/php-wrapper/releases) [![Packagist](https://img.shields.io/packagist/dt/fortnite-api/php-wrapper)](https://packagist.org/packages/fortnite-api/php-wrapper) [![GitHub issues](https://img.shields.io/github/issues/Fortnite-API/php-wrapper?logo=github)](https://github.com/Fortnite-API/php-wrapper/issues) [![MIT License](https://img.shields.io/github/license/Fortnite-API/php-wrapper)](https://github.com/Fortnite-API/php-wrapper/blob/master/LICENSE)
 
-[![Guzzle HTTP](https://img.shields.io/badge/requires-guzzlehttp%2Fguzzle-blue)](https://github.com/guzzle/guzzle) [![PHP version](https://img.shields.io/packagist/php-v/fortnite-api/php-wrapper)](https://www.php.net/)
+[![PHP version](https://img.shields.io/packagist/php-v/fortnite-api/php-wrapper?logo=php)](https://www.php.net/) [![Guzzle HTTP](https://img.shields.io/badge/requires-guzzlehttp%2Fguzzle-blue)](https://github.com/guzzle/guzzle) [![Donate](https://img.shields.io/badge/donate-PayPal-blue.svg?logo=paypal)](https://fortnite-api.com/paypal) [![Discord](https://discordapp.com/api/guilds/621452110558527502/widget.png?style=shield)](https://fortnite-api.com/discord)
 
 </div>
 
