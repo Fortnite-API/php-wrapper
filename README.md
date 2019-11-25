@@ -47,6 +47,9 @@ $api->news->...
 
 // accesses the shop endpoint (https://fortnite-api.com/shop)
 $api->shop->...
+
+// accesses the creatorcode endpoint (https://fortnite-api.com/creatorcode)
+$api->creatorCode->...
 ```
 
 ```php
