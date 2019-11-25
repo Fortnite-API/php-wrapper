@@ -3,6 +3,7 @@
 namespace FortniteApi;
 
 use FortniteApi\Components\Endpoints\CosmeticsEndpoint;
+use FortniteApi\Components\Endpoints\CreatorCodeEndpoint;
 use FortniteApi\Components\Endpoints\NewsEndpoint;
 use FortniteApi\Components\Endpoints\ShopEndpoint;
 use FortniteApi\Config\Config;
@@ -32,6 +33,13 @@ class FortniteApi
     public $news;
 
     /**
+     * @inheritDoc
+     *
+     * @var CreatorCodeEndpoint $creatorCode
+     */
+    public $creatorCode;
+
+    /**
      * Constructs a new FortniteApi instance.
      */
     public function __construct()
@@ -39,6 +47,7 @@ class FortniteApi
         $this->cosmetics = new CosmeticsEndpoint();
         $this->shop = new ShopEndpoint();
         $this->news = new NewsEndpoint();
+        $this->creatorCode = new CreatorCodeEndpoint();
     }
 
     /**
