@@ -2,16 +2,29 @@
 
 namespace FortniteApi\Components\Endpoints;
 
-use FortniteApi\Components\HttpClient;
 use FortniteApi\Components\Tasks\ShopTask;
 use FortniteApi\FortniteApi;
 use FortniteApi\FortniteApiError;
+
+use GuzzleHttp\Client;
 
 /**
  * Provides access to the /shop/ endpoint.
  */
 class ShopEndpoint
 {
+    /**
+     * Undocumented variable
+     *
+     * @var Client
+     */
+    private $httpClient;
+
+    public function __construct($httpClient)
+    {
+        $this->httpClient = $httpClient;
+    }
+
     /**
      * Returns the current battle royale shop.
      *
@@ -54,9 +67,9 @@ class ShopEndpoint
         }
 
         if (count($query) == 0) {
-            $promise = HttpClient::getInstance()->getAsync($path);
+            $promise = $this->httpClient->getAsync($path);
         } else {
-            $promise = HttpClient::getInstance()->getAsync($path, [
+            $promise = $this->httpClient->getAsync($path, [
                 "query" => $query
             ]);
         }

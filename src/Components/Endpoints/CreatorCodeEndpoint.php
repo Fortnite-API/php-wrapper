@@ -2,16 +2,29 @@
 
 namespace FortniteApi\Components\Endpoints;
 
-use FortniteApi\Components\HttpClient;
 use FortniteApi\Components\Tasks\CreatorCodeArrayTask;
 use FortniteApi\Components\Tasks\CreatorCodeTask;
 use FortniteApi\FortniteApiError;
+
+use GuzzleHttp\Client;
 
 /**
  * Provides access to the /creatorcode endpoint.
  */
 class CreatorCodeEndpoint
 {
+    /**
+     * Undocumented variable
+     *
+     * @var Client
+     */
+    private $httpClient;
+
+    public function __construct($httpClient)
+    {
+        $this->httpClient = $httpClient;
+    }
+
     /**
      * Returns the creator code data for a given slug.
      *
@@ -51,7 +64,7 @@ class CreatorCodeEndpoint
             "slug" => $slug
         ];
 
-        $promise = HttpClient::getInstance()->getAsync($path, [
+        $promise = $this->httpClient->getAsync($path, [
             "query" => $query
         ]);
 
@@ -97,7 +110,7 @@ class CreatorCodeEndpoint
             "slug" => $slug
         ];
 
-        $promise = HttpClient::getInstance()->getAsync($path, [
+        $promise = $this->httpClient->getAsync($path, [
             "query" => $query
         ]);
 
@@ -143,7 +156,7 @@ class CreatorCodeEndpoint
             "slug" => $slug
         ];
 
-        $promise = HttpClient::getInstance()->getAsync($path, [
+        $promise = $this->httpClient->getAsync($path, [
             "query" => $query
         ]);
 
