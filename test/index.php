@@ -16,7 +16,10 @@ $awaitables = [
     "cosmeticSearchAll" => $api->cosmetics->searchAllAsync(["rarity" => "uncommon"]),
     "cosmetics" => $api->cosmetics->getAllAsync(),
     "news" => $api->news->getAsync(),
-    "shop" => $api->shop->getAsync()
+    "shop" => $api->shop->getAsync(),
+    "creatorCode" => $api->creatorCode->getAsync("getonmylvl"),
+    "creatorCodeSearch" => $api->creatorCode->searchAsync("getonmylvl"),
+    "creatorCodeSearchAll" => $api->creatorCode->searchAllAsync("getonmylvl"),
 ];
 
 $result = [];
