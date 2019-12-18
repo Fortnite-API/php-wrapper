@@ -6,13 +6,28 @@ use FortniteApi\Components\Endpoints\CosmeticsEndpoint;
 use FortniteApi\Components\Endpoints\CreatorCodeEndpoint;
 use FortniteApi\Components\Endpoints\NewsEndpoint;
 use FortniteApi\Components\Endpoints\ShopEndpoint;
-use FortniteApi\Config\Config;
+
+use GuzzleHttp\Client;
 
 /**
  * Provides access to https://fortnite-api.com
  */
 class FortniteApi
 {
+    /**
+     * Undocumented variable
+     *
+     * @var string|null
+     */
+    private $apiKey;
+
+    /**
+     * Undocumented variable
+     *
+     * @var Client
+     */
+    private $httpClient;
+
     /**
      * @inheritDoc
      *
@@ -42,12 +57,33 @@ class FortniteApi
     /**
      * Constructs a new FortniteApi instance.
      */
-    public function __construct()
+    public function __construct($apiKey)
     {
-        $this->cosmetics = new CosmeticsEndpoint();
-        $this->shop = new ShopEndpoint();
-        $this->news = new NewsEndpoint();
-        $this->creatorCode = new CreatorCodeEndpoint();
+        if ($apiKey === null || $apiKey === false) {
+            $apiKey = "";
+        }
+
+        $this->httpClient = new Client([
+            "base_uri" => self::getBaseUri(),
+            "allow_redirects" => true,
+            "connect_timeout" => 30,
+            "timeout" => 30,
+            "headers" => [
+                "x-api-key" => $apiKey
+            ]
+        ]);
+
+        $this->apiKey = $apiKey;
+
+        $this->cosmetics = new CosmeticsEndpoint($this->httpClient);
+        $this->shop = new ShopEndpoint($this->httpClient);
+        $this->news = new NewsEndpoint($this->httpClient);
+        $this->creatorCode = new CreatorCodeEndpoint($this->httpClient);
+    }
+
+    public function getApiKey()
+    {
+        return $this->apiKey;
     }
 
     /**
@@ -57,7 +93,7 @@ class FortniteApi
      */
     public static function getBaseUri()
     {
-        return Config::getBaseUri();
+        return "https://fortnite-api.com";
     }
 
     /**
@@ -67,6 +103,22 @@ class FortniteApi
      */
     public static function getSupportedLanguages()
     {
-        return Config::getSupportedLanguages();
+        return [
+            "ar",
+            "de",
+            "en",
+            "es",
+            "es-419",
+            "fr",
+            "it",
+            "ja",
+            "ko",
+            "pl",
+            "pt-BR",
+            "ru",
+            "tr",
+            "zh-CN",
+            "zh-Hant"
+        ];
     }
 }

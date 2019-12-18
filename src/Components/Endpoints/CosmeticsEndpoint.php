@@ -2,18 +2,31 @@
 
 namespace FortniteApi\Components\Endpoints;
 
-use FortniteApi\Components\HttpClient;
 use FortniteApi\Components\Objects\Cosmetic;
 use FortniteApi\Components\Tasks\CosmeticArrayTask;
 use FortniteApi\Components\Tasks\CosmeticTask;
 use FortniteApi\FortniteApi;
 use FortniteApi\FortniteApiError;
 
+use GuzzleHttp\Client;
+
 /**
  * Provides access to the /cosmetics/ endpoint
  */
 class CosmeticsEndpoint
 {
+    /**
+     * Undocumented variable
+     *
+     * @var Client
+     */
+    private $httpClient;
+
+    public function __construct($httpClient)
+    {
+        $this->httpClient = $httpClient;
+    }
+
     /**
      * Returns the requested cosmetic.
      *
@@ -64,9 +77,9 @@ class CosmeticsEndpoint
         }
 
         if (count($query) == 0) {
-            $promise = HttpClient::getInstance()->getAsync($path);
+            $promise = $this->httpClient->getAsync($path);
         } else {
-            $promise = HttpClient::getInstance()->getAsync($path, [
+            $promise = $this->httpClient->getAsync($path, [
                 "query" => $query
             ]);
         }
@@ -116,9 +129,9 @@ class CosmeticsEndpoint
         }
 
         if (count($query) == 0) {
-            $promise = HttpClient::getInstance()->getAsync($path);
+            $promise = $this->httpClient->getAsync($path);
         } else {
-            $promise = HttpClient::getInstance()->getAsync($path, [
+            $promise = $this->httpClient->getAsync($path, [
                 "query" => $query
             ]);
         }
@@ -167,7 +180,7 @@ class CosmeticsEndpoint
             $query["language"] = $language;
         }
 
-        $promise = HttpClient::getInstance()->getAsync($path, [
+        $promise = $this->httpClient->getAsync($path, [
             "query" => $query
         ]);
 
@@ -215,7 +228,7 @@ class CosmeticsEndpoint
             $query["language"] = $language;
         }
 
-        $promise = HttpClient::getInstance()->getAsync($path, [
+        $promise = $this->httpClient->getAsync($path, [
             "query" => $query
         ]);
 
@@ -277,7 +290,7 @@ class CosmeticsEndpoint
             $query["language"] = $language;
         }
 
-        $promise = HttpClient::getInstance()->getAsync($path, [
+        $promise = $this->httpClient->getAsync($path, [
             "query" => $query
         ]);
 

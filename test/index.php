@@ -8,7 +8,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 header("Content-Type: application/json");
 
-$api = new FortniteApi();
+$api = new FortniteApi(null);
 
 $awaitables = [
     "cosmetic" => $api->cosmetics->getAsync("bannertoken_001_cattus"),

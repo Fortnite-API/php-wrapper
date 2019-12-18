@@ -2,17 +2,30 @@
 
 namespace FortniteApi\Components\Endpoints;
 
-use FortniteApi\Components\HttpClient;
 use FortniteApi\Components\Tasks\NewsEntryTask;
 use FortniteApi\Components\Tasks\NewsTask;
 use FortniteApi\FortniteApi;
 use FortniteApi\FortniteApiError;
+
+use GuzzleHttp\Client;
 
 /**
  * Provides access to the /news/ endpoint.
  */
 class NewsEndpoint
 {
+    /**
+     * Undocumented variable
+     *
+     * @var Client
+     */
+    private $httpClient;
+
+    public function __construct($httpClient)
+    {
+        $this->httpClient = $httpClient;
+    }
+
     /**
      * Returns the data of the current battle royale, save the world and creative news.
      *
@@ -55,9 +68,9 @@ class NewsEndpoint
         }
 
         if (count($query) == 0) {
-            $promise = HttpClient::getInstance()->getAsync($path);
+            $promise = $this->httpClient->getAsync($path);
         } else {
-            $promise = HttpClient::getInstance()->getAsync($path, [
+            $promise = $this->httpClient->getAsync($path, [
                 "query" => $query
             ]);
         }
@@ -168,9 +181,9 @@ class NewsEndpoint
         }
 
         if (count($query) == 0) {
-            $promise = HttpClient::getInstance()->getAsync($path);
+            $promise = $this->httpClient->getAsync($path);
         } else {
-            $promise = HttpClient::getInstance()->getAsync($path, [
+            $promise = $this->httpClient->getAsync($path, [
                 "query" => $query
             ]);
         }
